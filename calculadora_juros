@@ -1,0 +1,25 @@
+def investimento_necessario(renda, percentagem):
+    investimento = (12*renda)/percentagem
+    print(f'O investimento necessário para obter a renda mensal de R${renda} mensais, com base na taxa de juros de {percentagem} é: R${investimento}')
+def renda_mensal(investimento, percentagem):
+    renda = (investimento * percentagem)/12
+    print(f'Com o investimento de R${investimento} e um juros de {perdentagem} você obterá uma renda mensal de: R${renda}')    
+
+calculo = input('''Bem vindo à calculadora de lucros, o que você deseja saber?
+Digite 1 para saber quanto investir para chegar na renda mensal desejada.
+Digite 2 para saber a renda mensal de seu investimento.
+''')
+if calculo == '1':
+    renda_investimento = float(input('''Em valores numéricos, quanto você deseja receber por mês?
+    '''))
+    juros = float(input('''Em valores numéricos, quanto é a percentagem de juros, ao ano, do investimento? 
+    '''))
+    investimento_necessario(renda_investimento, juros)
+elif calculo == '2':
+    investimento_inicial = float(input('''Em valores numéricos, quanto é o seu investimento?
+    '''))
+    juros = float(input('''Em valores numéricos, quanto é a percentagem de juros, ao ano, do investimento? 
+    '''))
+    investimento_necessario(investimento_inicial, juros)
+else:
+    print('Erro')
